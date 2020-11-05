@@ -1,6 +1,8 @@
 package com.codedifferently.day02Wednesday;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class BasicStringUtils {
     /**
@@ -15,6 +17,8 @@ public class BasicStringUtils {
             //newWord = newWord += strArray[i];
             camelWord = s.substring(0, 1).toUpperCase() + s.substring(1);
             camelWords = camelWords += camelWord + " ";
+        String[] strArray2 = camelWords.split(" ");
+        System.out.printf(strArray2[0]);
         }
         return camelWords.stripTrailing();
     }
@@ -41,17 +45,49 @@ public class BasicStringUtils {
      */
     public static String reverseWords(String str) {
         //String[] stringArray = str.split(" ");
-        StringBuilder input1 = new StringBuilder();
-        input1.append(str);
-        input1 = input1.reverse();
+        //ArrayList<String> words = new ArrayList<>();
+        //String word = "";
+        //StringBuilder result = new StringBuilder();
 
+        List newList = new ArrayList<String>();
+        newList = Arrays.asList(str);
+        //StringBuilder input = new StringBuilder();
+        String concatString = "";
+        for (int i = 3; i != -1; i-- ) {
+            String result = (String) newList.get(i);
 
- /*       for (int i = 0; i < input1.capacity(); i++) {
+            System.out.println(result);
+            /*System.out.println(result);
+*/
+        }
+        return "hello";
+    }
+      /*  for (String word: stringArray) {
+            stringArray = word.split("");
+            for (int i = word.split("").length; i >= 0; i--)
+
+                System.out.println(i + word);
+
 
         }*/
-        return input1.toString();
 
+
+
+       /* word += stringArray[i];
+        words.add(stringArray[i]);*/
+
+
+
+   /*
     }
+        String[] stringArray = str.split(" ");
+        StringBuilder input = new StringBuilder();
+        input.append(str+" ");
+        System.out.println(input.toString());
+        input = input.reverse();
+        System.out.println(input1.toString());
+*/
+
 
 
 
