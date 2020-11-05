@@ -7,11 +7,11 @@ public class BasicStringUtilsTest {
     @Test
     public void camelCaseTest() {
         // Given
-        String input = "she sells sea shells";
+        String str = "she sells sea shells";
         String expected = "She Sells Sea Shells";
 
         // When
-        String actual = BasicStringUtils.camelCase(input);
+        String actual = BasicStringUtils.camelCase(str);
 
         // Then
         Assert.assertEquals(expected, actual);
