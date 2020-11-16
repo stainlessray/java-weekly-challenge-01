@@ -14,11 +14,8 @@ public class BasicStringUtils {
         String camelWord;
         String camelWords = "";
         for (String s : strArray) {
-            //newWord = newWord += strArray[i];
             camelWord = s.substring(0, 1).toUpperCase() + s.substring(1);
             camelWords = camelWords += camelWord + " ";
-        String[] strArray2 = camelWords.split(" ");
-        System.out.printf(strArray2[0]);
         }
         return camelWords.stripTrailing();
     }
